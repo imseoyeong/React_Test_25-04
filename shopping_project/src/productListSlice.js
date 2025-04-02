@@ -10,6 +10,7 @@ const productListSlice = createSlice({
             { id: 3, title: "Product C", price: 300 },
         ],
         cart: [],
+        // amount: cart.length + 1,
     },
     reducers: {
         onSave: (state, action) => {
