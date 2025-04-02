@@ -11,7 +11,7 @@ export default function Product() {
                 {product.title} - {product.price}원
                 <button type='button' onClick={() => {
                     dispatch(onSave(product));
-                    alert(`${product.title}가 장바구니에 담겼습니다.`)
+                    alert(`${product.title}가 장바구니에 담겼습니다.`);
                 }}>Add to Cart</button>
             </li>;
         list.push(item);

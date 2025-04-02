@@ -17,7 +17,7 @@ const productListSlice = createSlice({
             state.cart.push(product);
         },
         onDelete: (state, action) => {
-
+            state.cart = state.cart.filter((product) => product.id !== action.payload);
         },
     },
 });
