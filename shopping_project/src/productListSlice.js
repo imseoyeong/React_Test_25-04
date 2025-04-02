@@ -9,10 +9,12 @@ const productListSlice = createSlice({
             { id: 2, title: "Product B", price: 200 },
             { id: 3, title: "Product C", price: 300 },
         ],
+        cart: [],
     },
     reducers: {
-        onSave: (state) => {
-            state.productList.push({ id: state.id, title: state.title, price: state.price });
+        onSave: (state, action) => {
+            const product = action.payload;
+            state.cart.push(product);
         },
         onDelete: (state, action) => {
 

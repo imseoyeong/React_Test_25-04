@@ -7,11 +7,12 @@ export default function Product() {
 
     const list = [];
     for (let product of productList){
-        const item = <li key={product.id}>{
-                product.title} - {product.price}원
-                {/* 저장을 cart에 해야하는뎀 어케하지?^^ */}
-                <button type='button'>Add to Cart</button>
-                {/* <button type='button' onClick={() => dispatch(onSave({ id: product.id, title: product.title, price: product.price }))}>Add to Cart</button> */}
+        const item = <li key={product.id}>
+                {product.title} - {product.price}원
+                <button type='button' onClick={() => {
+                    dispatch(onSave(product));
+                    alert(`${product.title}가 장바구니에 담겼습니다.`)
+                }}>Add to Cart</button>
             </li>;
         list.push(item);
     }
